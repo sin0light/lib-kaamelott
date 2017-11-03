@@ -7,8 +7,11 @@ class kaamelott {
 	/**
 	* Properties
 	*/
-
-
+	private $haystackQuotes;
+	private $rawQuotes;
+	private $personnages;
+	private $onlyPersonnages;
+	
 
 	/**
 	* Methods
@@ -16,7 +19,10 @@ class kaamelott {
 
 	function __construct() {
 		include('data.php');
-		# code...
+		$this->haystackQuotes = $haystackQuotes;
+		$this->rawQuotes = $rawQuotes;
+		$this->personnages = $personnages;
+		$this->onlyPersonnages = $onlyPersonnages;
 	}
 
 	public function random() {
