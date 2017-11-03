@@ -36,7 +36,7 @@ class kaamelott {
 		if ($livre > 0 && $livre < 7) {
 			// Getting all the quotes of this season
 			foreach ($this->haystackQuotes as $key => $value) {
-				if ($value['infos']['saison'] == mapLivre($livre)) {
+				if ($value['infos']['saison'] == $this->mapLivre($livre)) {
 					$quotes[] = $value;
 				}
 			}
@@ -90,7 +90,7 @@ class kaamelott {
 			if ($livre > 0 && $livre < 7) {
 			// Getting all the quotes of this season and this character
 				foreach ($this->haystackQuotes as $key => $value) {
-					if (strtolower($value['infos']['personnage']) == strtolower($personnage) && $value['infos']['saison'] == mapLivre($livre)) {
+					if (strtolower($value['infos']['personnage']) == strtolower($personnage) && $value['infos']['saison'] == $this->mapLivre($livre)) {
 						$quotes[] = $value;
 					}
 				}
@@ -125,7 +125,7 @@ class kaamelott {
 		if ($livre > 0 && $livre < 7) {
 			// Getting all the quotes of this season
 			foreach ($this->haystackQuotes as $key => $value) {
-				if ($value['infos']['saison'] == mapLivre($livre)) {
+				if ($value['infos']['saison'] == $this->mapLivre($livre)) {
 					$quotes[] = $value;
 				}
 			}
@@ -179,7 +179,7 @@ class kaamelott {
 			if ($livre > 0 && $livre < 7) {
 			// Getting all the quotes of this season and this character
 				foreach ($this->haystackQuotes as $key => $value) {
-					if (strtolower($value['infos']['personnage']) == strtolower($personnage) && $value['infos']['saison'] == mapLivre($livre)) {
+					if (strtolower($value['infos']['personnage']) == strtolower($personnage) && $value['infos']['saison'] == $this->mapLivre($livre)) {
 						$quotes[] = $value;
 					}
 				}
