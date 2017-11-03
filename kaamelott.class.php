@@ -199,8 +199,6 @@ class kaamelott {
 			$return['status'] = 0;
 			$return['error'] = 'Personnage inconnu.';
 		}
-		// Returning result
-		return $return;
 	}
 
 	// Functions to map integer 'livre' to the correct value
