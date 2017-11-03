@@ -8,14 +8,14 @@ class kaamelott {
 	* Properties
 	*/
 
-	include('data.php');
 
 
 	/**
 	* Methods
 	*/
 
-	function __construct(argument) {
+	function __construct() {
+		include('data.php');
 		# code...
 	}
 
