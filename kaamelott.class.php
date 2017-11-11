@@ -27,7 +27,9 @@ class kaamelott {
 
 	// Return a random quote 
 	public function random() {
-		return $this->haystackQuotes[array_rand($this->haystackQuotes)];
+		$ret['status'] = 1;
+		$ret['citation'] = $this->haystackQuotes[array_rand($this->haystackQuotes)];
+		return $ret;
 	}
 
 	// Return a random quote from one season 
