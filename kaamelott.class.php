@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
 * Class Kaamelott : Quote Kaamelott
@@ -8,31 +8,29 @@ class kaamelott {
 	* Properties
 	*/
 	private $haystackQuotes;
-	private $rawQuotes;
 	private $personnages;
 	private $onlyPersonnages;
-	
+
 
 	/**
 	* Methods
 	*/
 
 	function __construct() {
-		include('data.php');
-		$this->haystackQuotes = $haystackQuotes;
-		$this->rawQuotes = $rawQuotes;
-		$this->personnages = $persos;
-		$this->onlyPersonnages = $onlyPersos;
+		$data = json_decode(file_get_contents('data.json'), true); //WARNING: can throw error if file misformed and/or missing!
+		$this->haystackQuotes = $data['haystackQuotes'];
+		$this->personnages = $data['persos'];
+		$this->onlyPersonnages = $data['onlyPersos'];
 	}
 
-	// Return a random quote 
+	// Return a random quote
 	public function random() {
 		$ret['status'] = 1;
 		$ret['citation'] = $this->haystackQuotes[array_rand($this->haystackQuotes)];
 		return $ret;
 	}
 
-	// Return a random quote from one season 
+	// Return a random quote from one season
 	public function randomLivre($livre) {
 		// Checking if $livre is correct
 		if ($livre > 0 && $livre < 7) {
